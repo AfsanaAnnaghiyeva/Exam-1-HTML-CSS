@@ -227,7 +227,7 @@ nav {
   margin-bottom: 10px;
 }
 .right-any a {
-  font-size: 35px;
+  font-size: 20px;
   color: #000a2d;
   font-weight: 700;
   margin-bottom: 10px;
@@ -676,7 +676,7 @@ footer {
   display: block;
   margin: 10px 0;
   font:
-    normal 1.9em "Rubik",
+    normal 1.4em "Rubik",
     sans-serif;
   font-weight: 400;
   color: white;
@@ -710,11 +710,20 @@ footer {
 .footer-right {
   flex: unset;
   width: 100%;
-  margin: 10px 0;
+  margin: 25px 0;
   text-align: center;
 }
-.footer-right a {
-  margin: 0 10px;
+.footer-right{
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+.footer-icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 15px;
 }
 
 /*Desktop version*/
@@ -960,10 +969,12 @@ footer {
     font-size: 14px;
   }
   .footer-right {
-    flex: 1;
-    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
   }
-  .footer-right a {
+  .footer-right a, .footer-icons{
     margin-left: 15px;
     font-size: 16px;
     transition: all 0.3s ease;
