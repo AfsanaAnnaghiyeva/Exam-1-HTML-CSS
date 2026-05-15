@@ -657,54 +657,66 @@ nav {
 /*FOOTER*/
 footer {
   background: #000a2d;
+  padding: 60px 0;
 }
 .footer {
   color: white;
-  padding-top: 60px;
-  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 .footer-top {
-  text-align: center;
-  margin-bottom: 40px;
+  width: 100%;
 }
 .footer-top img {
   width: 213px;
-  height: 51px;
-  margin: 0 0 30px;
+  height: auto;
+  margin-bottom: 25px;
 }
 .footer-top a {
   display: block;
-  margin: 10px 0;
   font:
-    normal 1.4em "Rubik",
+    normal 1.3em "Rubik",
     sans-serif;
-  font-weight: 400;
   color: white;
+  margin-bottom: 15px;
 }
 .footer-top p {
   font:
     normal 0.9em "Rubik",
     sans-serif;
-  margin: 0 0 10px;
+  color: #c5c5dd;
   line-height: 30px;
   font-weight: 500;
-  color: #c5c5dd;
-  height: 30px;
-  margin-bottom: 1px;
+  margin-bottom: 5px;
 }
-.footer-botom {
+.footer-bottom {
+  width: 100%;
+  border-radius: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+  margin-top: 40px;
+}
+.footer-copy {
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 5px;
   text-align: center;
+  /*padding: 5px 0;*/
 }
 .footer-left p {
-  height: 32px;
+  font-size: 14px;
   color: #393a50;
 }
 .footer-left span {
   color: #c74039;
 }
 .footer-right {
-  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 .footer-left,
 .footer-right {
@@ -713,17 +725,14 @@ footer {
   margin: 25px 0;
   text-align: center;
 }
-.footer-right{
+.footer-right {
   display: flex;
   flex-direction: column;
   margin: 10px 0;
 }
-.footer-icons{
+.footer-icons {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  margin: 15px;
+  gap: 15px;
 }
 
 /*Desktop version*/
@@ -732,11 +741,11 @@ footer {
     width: 95%;
   }
   header {
-  background: url("../img/headerbg.jpeg") center / cover;
-}
-.slide-text {
-  text-align: left;
-}
+    background: url("../img/headerbg.jpeg") center / cover;
+  }
+  .slide-text {
+    text-align: left;
+  }
   .mobil-bar {
     display: none;
   }
@@ -783,11 +792,14 @@ footer {
     font-weight: 600;
   }
   .slide-buttons {
-  align-items: start;
-  justify-content: start;
-  margin-left: 0;
-}
-  .slide-buttons .learn, .slide-buttons .hire {width: 25%;}
+    align-items: start;
+    justify-content: start;
+    margin-left: 0;
+  }
+  .slide-buttons .learn,
+  .slide-buttons .hire {
+    width: 25%;
+  }
   .desktop-menu button {
     font:
       normal 0.8em "Rubik",
@@ -956,30 +968,48 @@ footer {
     font-size: 50px;
   }
   .footer-bottom {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+  }
+  .footer-copy {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    border-radius: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 20px;
   }
   .footer-left {
-    flex: 1;
     text-align: left;
-    font-size: 14px;
+    flex: 1;
   }
   .footer-right {
-    display: flex;
-    align-items: center;
-    justify-content: start;
+    flex: 1;
     flex-direction: row;
+    justify-content: flex-end;
+    gap: 30px;
   }
-  .footer-right a, .footer-icons{
-    margin-left: 15px;
-    font-size: 16px;
+  .footer-right a,
+  .footer-icons {
+    display: flex;
+    margin-left: 0;
+    font-size: 14px;
     transition: all 0.3s ease;
+    gap: 15px;
   }
-  .footer-right a:hover {
-    color: #ff4d4d;
+  #fr-caption, .fa-facebook-f, .fa-globe, .fa-instagram,  .fa-twitter {
+    transition: all .4s ease;
+  }
+  #fr-caption:hover{color: #c74039;}
+  .fa-twitter:hover {
+    color: #50c5f3;
+  }
+  .fa-facebook-f:hover{
+    color: #0833ce;
+  }
+  .fa-globe:hover{
+    color: orange;
+  }
+  .fa-instagram:hover{
+    color: #9d1364;
   }
 }
